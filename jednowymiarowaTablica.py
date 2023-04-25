@@ -16,15 +16,19 @@ print(A)
 
 A *= 2
 print(A)
-'''
-for i in range(5):
-    for j in range(3):
-        if A[i,j] % 6 == 2:
-            A[i,j] = 0
-'''
-Div6 = A % 6 == 2
-print(Div6)
 
 
+Div6 = A % 6 != 2
+A *= Div6
+print(A)
+
+def change(A, x):
+    Tab1 = A == 0
+    print(Tab1)
+    Tab2 = A != 0
+    print(Tab2)
+    return A * Tab2 + (Tab1 * x)
 
 
+B = change(A, 8)
+print(B)
